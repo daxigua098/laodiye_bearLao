@@ -1,0 +1,22 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Runtime dependencies
+node_modules/
+
+# Runtime data and process files
+beerlao-landing/data/store.json
+beerlao-landing/server.pid
+*.log
+
+# Generated screenshots and inspection artifacts
+beerlao-landing/preview/
+.taste-skill/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

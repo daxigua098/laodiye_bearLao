@@ -1,0 +1,185 @@
+# DIRECTION SHEET — Loud and flat
+seed 1873758737 · drawn 2026-10-20 · sector physical-product
+Brief: Beerlao Premium Lager, a Lao lager sold in 330ml bottles and 24-bottle cases, for Chinese beer drinkers and distributors; crisp golden lager, Southeast Asian origin, green and gold brand identity
+
+| | |
+| --- | --- |
+| Direction | Loud and flat |
+| Hero | Two-line statement, full width |
+| Type | Chivo |
+| Colour | Grey, mint, orange |
+| Sections | features (Stacking colour sheets) → showcase (Object in front of type) → about (Pinned title, portraits pass) → gallery (Wall of word tiles) → faq (A band per question) → cta (The idea again, inverted) → footer (The mark, built large) |
+| Motion | Masked headline |
+| Photographs | the "Field and farm" set, as atmosphere |
+
+This is the direction for this build. Adopt it. Do not blend it with the layout you would have made anyway,
+and do not redraw because it is unfamiliar: unfamiliar is the point. Redraw a slot only when it conflicts
+with a stated brand constraint or needs an asset that does not exist, and say why in your report.
+
+The parts of this sheet were written separately and will disagree in small ways. Settle every disagreement in this order:
+**house rules** (including type no smaller than 13px and body text of 16px or more) → **the direction** (the idea, the composition habits, where the
+one accent goes) → **the type system and the palette** (which face does which job, the five size steps, which colour is the ground and where the
+accent goes) → **the hero blueprint** → **the section blueprints**. Under each blueprint below, "Adjusted for this page" lists where it disagrees.
+In practice: take geometry from blueprints (columns, proportions, what sits where) and take everything else from above them. Map every size a
+blueprint names onto one of your five type steps instead of adding a sixth. Use one button shape, one corner radius and one pair of page margins on
+the whole page, whatever individual blueprints say. If a blueprint names a kind of typeface (a light serif, a heavy grotesk), use the dealt face.
+
+## 1. The idea
+A page with the directness of a street poster: flat saturated colour, the heaviest type you can find, short blunt statements, and photographs cut out and stuck on. It is for subjects with a voice. Write the page as things a person would actually say out loud, and let the design say them at full volume. The craft is in the control beneath the noise: a strict grid, two or three colours, and exact alignment keep it from becoming a mess.
+
+Before anything else, write one sentence in your notes: "On this page, <the subject's own material> becomes <the device>."
+Fill the first blank from your inventory of what only this client has (its name and what it means, its street, its numbers, its
+constraint), then put the nearest competitor in the sentence: if it still works, the idea is the category's, not the client's.
+Then name the one live thing the visitor can do on the page (SKILL.md step 4).
+
+## 2. Composition
+Hero: a statement of three to six words in ultra-heavy type at 11–15vw, filling the width, lines stacked tight (leading 0.85), flush left with 20–28px margins, on a flat saturated ground. One cut-out or hard-cropped photograph overlaps the type from the right or bottom, tilted 3–6 degrees. A single chunky button in the contrasting flat colour. Sections are solid panels in alternating palette colours: one is a row of short statements each on its own panel of unequal width; one is a single photograph bleeding off two edges with a caption block set over a solid colour bar; one is a large plain list. Panels meet edge to edge. Corners are square or use one large radius (28–40px) consistently.
+
+## 3. Type — Chivo
+A black grotesque in capitals with letters nearly colliding, and only two sizes on the page: enormous and small. Suits agencies, city and culture projects and musicians who want the type to land like a headline.
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&display=swap" rel="stylesheet">
+```
+- Display: **Chivo** — weight 900 · tracking -0.05em · leading 0.88 · uppercase
+- Text: **Chivo** — 400 for paragraphs, 700 for navigation, tags and links · leading 1.35 · tracking -0.01em
+```css
+:root {
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2.5rem, 1.2rem + 5vw, 5.5rem);
+}
+```
+The heaviest weight available, set tight, mostly lowercase or mostly uppercase (choose one). Body text is a plain grotesk at 18–20px.
+The direction decides sizes and how many of them; the type system decides how this face is set. Where the two give different tracking or leading, use the values of the type system: they are tuned to this face.
+The display size itself comes from the hero blueprint below.
+
+## 4. Colour — Grey, mint, orange
+```css
+:root {
+  --bg: #ffffff;
+  --surface: #f5f5f5;
+  --ink: #000000;
+  --muted: #666666;
+  --accent: #a7ff9c;
+  --accent-ink: #000000;
+  --field-1: #c5c5c5;  --field-1-ink: #000000;
+  --field-2: #a7ff9c;  --field-2-ink: #000000;
+  --field-3: #ff6831;  --field-3-ink: #000000;
+  --field-4: #000000;  --field-4-ink: #ffffff;
+}
+```
+Black on white to start, then whole sections flood with flat mid-grey, acid mint and orange in turn. Photographs inside a flooded section are shown in black-and-white, and mint is also the button colour on white and black.
+Three or four flat colours at full strength including black or white. Each panel is one colour; text on it is one other.
+
+## 5. Imagery
+**Use the images that belong to the project in every picture slot.** For slots they cannot fill, real pictures of the subject's world from the open collections come next (start with `node C:/Users/Administrator/.codex/skills/design-taste-frontend/scripts/assets.mjs "lager sold"`, then queries from your inventory (its street, its materials, its trade's tools and history); credit them on the page), then the dealt photographs.
+
+Photographs with attitude, cropped hard or cut to a simple shape with `clip-path` (circle, arch, blunt polygon), slightly rotated, overlapping the type. Two or three on the page.
+
+**Floor (the inspector checks it):** at least four real pictures on the page, usually six to twelve; SVG drawings do not count. One moving picture where an honest clip exists: `node <skill>/scripts/assets.mjs --video "<query>"`, used as a muted loop with a poster frame. Whatever this direction says about pictures, it is carried out with real ones.
+
+Photographs dealt for this build, from the "Field and farm" set (fields, grassland and rural land)
+Order of preference for imagery: (1) the project's own photographs and product shots; (2) images you generate, if an image tool is
+available; (3) real pictures of the subject's world found in the open collections (assets.mjs, downloaded and credited on the page);
+(4) drawings of the subject in code; (5) these. They are real photographs (Unsplash licence, served by picsum.photos) of places, light and
+texture. They are atmosphere, never a stand-in for a specific product, dish, person or interface. List the ones you use in your report so
+they can be replaced.
+- `https://picsum.photos/id/808/1600/1000` — Ploughed brown soil beside a green field under a pale sky · light tone · earth brown, grass green, off-white · calm area: top · native landscape · photo: elizabeth lies
+- `https://picsum.photos/id/85/1600/1000` — Tractor pulling a trailer of hay bales across a golden field · mid tone · golden yellow, sky blue, white · calm area: top · native landscape · photo: Gozha Net
+- `https://picsum.photos/id/542/1600/1000` — Flat green pasture beneath a heavy grey storm sky · mid tone · grass green, slate grey · calm area: top · native landscape · photo: Crucifix Jean-Luc
+- `https://picsum.photos/id/107/1600/1000` — Close view of green wheat ears beneath a white sky · mid tone · fresh green, white · calm area: top · native landscape · photo: Lukas Schweizer
+- `https://picsum.photos/id/915/1600/1000` — Rows of tea bushes covering a green plantation hillside · mid tone · tea green, dark green · native landscape · photo: McDobbie Hu
+- `https://picsum.photos/id/955/1600/1000` — Aerial view of diagonal crop rows in green and gold · mid tone · olive green, straw gold, dark green · native landscape · photo: Matt Benson
+- `https://picsum.photos/id/699/1600/1000` — Shepherd with a flock of sheep in rolling green wooded hills · mid tone · green, olive, cream · native landscape · photo: Biegun Wschodni
+- `https://picsum.photos/id/337/1600/1000` — Golden wheat field beneath dark trees and a cloudy sky · mid tone · golden yellow, dark green, pale grey · calm area: top · native landscape · photo: Cornelia Büchse
+The last two path numbers are width and height: request the exact crop you render (`/1200/1500` for a 4:5 portrait, `/2400/1350` for a hero) and
+add `?grayscale` to desaturate. Use three to six of them, not all eight. Always set `width`, `height`, `alt` and `loading="lazy"` (not on the hero image).
+Other sets that fit this brief: forest, plants-and-flowers, hands-and-making, mountain — `node draw.mjs --photos <set>` prints one in full; `--photos list` shows all sets. Taking photographs from another set is your call and is not a redraw; keep them to one light and one treatment.
+
+## 6. Hero — Two-line statement, full width
+Paper and ink only; no image. The wordmark at 15px sits top-left and two or three text links at the same size top-right, both on 24px margins; there is no bar. The statement fills the upper two thirds: two lines at clamp(96px, 12.5vw, 200px), medium to bold weight, tracking -0.05em, leading 0.86, starting 15% below the top edge. The first line is flush to the left margin and the second flush to the right margin, so the pair spans the full width and steps across the screen. Size the type so the longer line runs margin to margin: tune the vw value to the character count and test it at 1440 and 390. Between the statement and the bottom row about 18% of the height is left empty. The bottom row sits on one baseline 28px above the bottom edge: one supporting sentence at 22px on the left, max 44ch on two lines, and the single action bottom-right as a solid ink rectangle with square corners. There is no colour beyond ground and ink.
+
+On a phone: Both lines turn flush left on 16px margins at 17vw, leading 0.9, starting at 14% of the height and filling the width. A gap of about 20% of the screen follows. The sentence sits at 17px above a full-width action, both anchored to the bottom with 20px to spare. Navigation reduces to the wordmark and one menu word.
+Headline: A 3-5 word statement on two lines, at most 11 characters per line so 17vw type fits a phone.
+
+Adjusted for this page:
+- It sets a sentence large over several lines: jurors read that as a long headline. Either cut it to a two-line headline at display size, or keep it a statement at 36px or less on three lines (24px, four lines on a phone).
+
+## 7. Sections, in order
+Each is a composition to rebuild with this project's content. Keep the geometry; change the subject. Re-order or drop a
+section when the argument of the page needs it (see references/copy.md), never to fall back to a card grid.
+
+### 1. features — Stacking colour sheets (stack)
+Three to five capabilities, each a full-width flat colour sheet about 86svh tall with only its top corners rounded at 28px. Every sheet is position: sticky, with top offsets rising by 72px from one sheet to the next, so each new sheet slides up over the last and leaves the previous sheet's title band showing, like tabbed folders in a drawer. Inside a sheet: the capability name top-left at clamp(28px, 3vw, 44px), sitting within that 72px band; a paragraph of up to 40ch at 18px bottom-left; and in columns 7–12 one photograph filling the sheet from below the band to the bottom edge, square corners, no inset. Sheet colours follow the palette in a fixed order, with ink chosen per sheet. The heading, two to four words at clamp(40px, 5vw, 80px), sits on the ground above the stack with 48px beneath and scrolls away normally.
+On a phone: Sheets stay sticky but the offset shrinks to 52px and the name drops to 22px so it fits the visible band. Inside each sheet the photograph comes first at 4:3 and full width, then the paragraph at 17px with 20px padding. Sheets are as tall as their content, 70svh at least.
+
+Adjusted for this page:
+- It names its own corners: use the one radius of this page (square unless the direction says otherwise) and one button shape.
+
+### 2. showcase — Object in front of type (statement)
+Type and object share one space instead of sitting side by side. Three or four lines of display type, one or two words each, are stacked flush left at clamp(72px, 9vw, 150px) with leading 0.88, starting on the left margin and allowed to leave the right edge (white-space: nowrap; overflow: hidden on the section). The lines step through tones of one ink: one at 45%, one at full strength, the rest at 18%. The object photograph, a cut-out or a studio shot blended with multiply, is absolutely positioned over the upper right of the stack at 40–46vw wide, rotated no more than 6 degrees and above the type in the stacking order, so it hides parts of three or four letters. Under the stack, in columns 8–12, a two-paragraph block at 20px gives the facts. The full-strength line is the heading; nothing sits above it.
+On a phone: Type drops to 15vw and still runs off the right edge. The object sits at 78vw wide, overlapping the last two lines from below instead of from the right, and is cropped by the right edge. The facts block follows at full width and 17px.
+
+Adjusted for this page:
+- It fades text: anything a visitor reads, inactive items of a list included, is `--ink` or `--muted` at full strength (contrast 4.5:1 or more). The active item is told apart by `--ink` against `--muted`, weight or the accent, not by fading the rest.
+
+### 3. about — Pinned title, portraits pass (pinned)
+A wrapper tall enough for its portraits: about 90svh per person, up to six people. A `position: sticky; top: 0` layer of 100svh holds the heading, two words at clamp(88px, 12vw, 180px), leading 0.85, centred at mid-height, in white with `mix-blend-mode: difference` so it reads over ground and photographs alike. Beneath it in the stacking order, portraits scroll past in normal flow: each a 4:5 photograph 26–30vw wide, alternately starting at column 2 and ending at column 11, 60svh apart, so each one passes behind a different half of the heading. Under each portrait's left corner: the name at 18px, the role at 14px in the soft ink, and one sentence of up to 30 words in a 280px measure. The last portrait is followed by 40svh of empty ground before the heading releases. Square corners. Nothing else is on screen.
+On a phone: The heading shrinks to 17vw and pins 16px from the top instead of at mid-height. Portraits become 72% wide, alternating between the left and right margins, 48px apart, each with name, role and sentence beneath at the portrait's width.
+
+Adjusted for this page:
+- It names colours (white): map them onto this palette's roles (ground `--bg`, panels `--surface` and the fields, text `--ink`/`--muted`, the accent `--accent` on the primary action only).
+- It blends text with `difference`: over anything but black, white or grey that gives random hues. Use a solid ink chosen for each ground instead.
+
+### 4. gallery — Wall of word tiles (grid)
+A gallery that works with no photographs: a four-column grid of identical square cells with 8px gaps running three or more rows, edge to edge with 8px margins. Each cell is a flat filled tile and centres one large element about 55% of the cell's width: a single word, a letter, a figure with its unit, or a simple inline SVG shape taken from the subject, set at clamp(56px, 9vw, 150px) in the display face. A one- or two-word caption at 14px sits centred 18px above the cell's bottom edge. Tile and ink colours rotate through three or four palette pairs in a fixed order, so a uniform grid looks varied. Where photographs exist, every third or fourth cell is a photograph covering its tile, all given one treatment. There is no hierarchy between cells: it is a specimen sheet. A heading is optional; if used, it occupies the first cell as that cell's word.
+On a phone: Two columns with 6px gaps; cells stay square and the central element is set at 22vw. Captions stay at 13px. Twelve cells make six rows; if there are more than sixteen, show twelve and let the rest follow after a full-width tile holding a text link.
+
+### 5. faq — A band per question (band)
+Each question owns a full-bleed band, and the bands alternate between two flat tones (ground and one step away, or two palette colours with their assigned inks) and butt together with no gap. Inside every band the same grid applies: the question in columns 1–5 at 28–32px bold, top-aligned with 56px of padding above; the answer in columns 7–12 at 18px with leading 1.5, the same padding, and 56px below. Bands are as tall as their content, so their heights differ, which gives the stack its rhythm. Four to seven bands. The heading is the first band: two to four words at about 7vw on the accent colour, flush left, taller than the rest at about 40svh with the words anchored to its bottom-left. All answers are visible; there are no toggles.
+On a phone: Bands stay full-bleed and alternate. Inside each, the question at 22px then the answer at 17px, with 32px padding top and bottom and 20px at the sides. The heading band is 30svh tall with its words at 13vw at the bottom-left.
+
+### 6. cta — The idea again, inverted (statement)
+The close flips the page's colours: ink becomes the ground and the ground becomes the ink, across a full-bleed field at least 90svh tall. The page's opening idea returns as a headline of three to five words at 9–11vw on two lines, leading 0.9, flush left, positioned in the upper two-thirds; it should echo the hero's wording, not repeat it. Along the bottom, on one shared baseline 40px above the edge: one supporting sentence at 20px in columns 1–5 and one rectangular button in the accent colour, right-aligned in columns 10–12, about 56px tall. Nothing else: no image, no second button, no logo. The field's top edge is a hard horizontal line where it meets the section above. If the footer follows on the same inverted field, leave 160px before it so the close still reads as its own screen.
+On a phone: The same inverted field at 80svh. Headline at 15vw on two lines at the top. The sentence sits lower at 17px, and the button spans the full width at the bottom, 56px tall, with 20px margins. Nothing else is added.
+
+### 7. footer — The mark, built large (band)
+On a flat colour field, the brand closes the page as a construction rather than as set type. Across the full content width and about 34svh tall, the wordmark is built from blocks: each letter is knocked out of its own solid rectangle in a palette colour, the rectangles differ in height (60–100% of the band) and butt together with 4px gaps, bottoms on one line. Where the project has a simple geometric mark or motif, enlarge that instead, drawn as inline SVG from flat rectangles, circles and quarter-arcs with the same 4px gaps. Below, 56px lower: four columns of plain links at 15px across columns 1–8, and two addresses or contact lines in columns 9–12. A last row carries the copyright at the left and one small filled button at the right. Space and the block construction do all the separating.
+On a phone: The block wordmark spans the full width at about 22svh tall; a long name breaks into two rows of blocks. Link columns go two across at 15px, contact lines beneath at full width, then copyright and the small button on one row.
+
+## 8. Motion — Masked headline
+On load, each line of the headline rises from behind its own baseline, about 900ms with a strong ease-out, the second line 110ms after the first; the supporting sentence and the action then fade up together. Nothing else on the page performs. Because headlines are two lines at most, you author the line breaks and wrap each line yourself. Recipe: 'Masked line reveal' in references/motion.md.
+This is the signature move, the one loud moment. Around it the page still needs the rest of the motion layer (SKILL.md step 9): an entrance for the parts of every section, feedback on every control, and one moving picture. The inspector fails a page that barely moves. Recipes: references/motion.md.
+
+## 10. Where the richness comes from
+Colour mass, type mass, and overlap.
+
+## 11. How this direction goes wrong
+Headlines still obey the two-line rule: at 13vw that means very few words, which is correct for this voice. No outlines, no offset shadows, no sticker confetti. Rotation is for two or three images only, never for text blocks.
+
+## 12. Real references
+Studied sites that work this way. Take the principle, never the specifics: no names, copy, images or signature assets of theirs.
+- **UGLYCASH** (One Page Love, studied score 7.4) `opl-uglycash`
+  Idea: A money app sold like streetwear: one shouted condensed headline over the phone, then sticker-covered 3D props where feature icons would normally go.
+  Hero: Near-white page. A floating light-grey nav bar only 35% of the viewport wide sits centred 20px from the top: condensed wordmark left, two social icons in the middle, an app button with a glowing magenta outline right. Directly beneath, a two-line uppercase headline in bold condensed grotesque at 11.4vw, centred, leading under 0.9, about 60% of the width, with a faint cyan and magenta fringe on the letter edges; it fills the band from 12% to 43% of the height. A single phone mockup 27% of the viewport wide rises immediately under the headline, centred, cut off by the bottom edge. Its magenta screen glow is the only colour.
+  Worth taking: Make the nav a short floating bar a third of the viewport wide so the headline can start almost at the top edge.
+- **Warm & Fuzzy** (Awwwards Site of the Day, studied score 7.7) `aww-warm-fuzzy`
+  Idea: A showreel-first studio site in which every section takes one flat, loud colour (blue, black, yellow) under heavy grotesk type and a chunky custom wordmark.
+  Hero: The showreel plays full-bleed with a visible film-grain overlay and no scrim. A chunky hand-cut wordmark sits top left, 16px from the edges; the same top line continues with a one-sentence status link, a tiny thumbnail beside the latest project's name, and three caps links at the far right, all white over the footage. A small green caps play label floats at dead centre. The tagline is anchored bottom left, 16px from both edges, in white grotesk caps at 47px (3.3vw) on one line spanning 56% of the width. A tiny square pause control sits bottom right.
+  Worth taking: Give every section one flat saturated background and change it at each section break, keeping type strictly black or white.
+- **poetry camera** (One Page Love, studied score 7.7) `opl-poetry-camera`
+  Idea: A camera that prints poems is sold through its own output: copy arrives as thermal-paper slips, and a soft-focus bitmap wordmark lies over handheld footage.
+  Hero: Full-bleed handheld video of two hands holding the white-and-red camera against out-of-focus blossom. The product name is centred over it in two lines of white lowercase bitmap lettering about 10vw tall, deliberately blurred so the pixels bloom into soft blobs; the block spans 70% of the width, from 25% to 70% of the height, directly on top of the camera. One text link sits top-left and two social icons top-right, all white. A yellow pill button about 165px wide with black lowercase text is centred near the bottom edge and stays fixed for the whole page. No tagline and no scrim.
+  Worth taking: Blur a bitmap wordmark until the pixels bloom, turning a hard retro face into something soft enough to sit on video without a scrim.
+Full notes on any of them: `node draw.mjs --site <id>`.
+
+## Always
+Headlines two lines or fewer at every width. No eyebrow labels, no monospace, no 01/02/03, no thin rules, no gradients, no shadows at rest,
+no cream-and-terracotta, no violet. The frame: one h1 on the first screen that says what this is, equal outer margins, no
+section huddled on one side with the other half empty, no blank stretch over half a screen, a heading on every section.
+`inspect.mjs` measures all of it.
+
+Saved to D:/biancheng/编程工具/codex-test/投流-SEO-GUO方向/投流/落地页学习/.taste-skill/direction.json · reprint with `node draw.mjs --show`

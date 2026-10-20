@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Beerlao · 投放线索后台</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="rail" aria-label="后台导航">
+      <a class="rail-brand" href="/" aria-label="Beerlao 落地页">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v3l1.5 3v10.5A1.5 1.5 0 0 1 15 21H9a1.5 1.5 0 0 1-1.5-1.5V9L9 6V3Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 11h8M8 17h8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
+      <nav class="rail-nav" aria-label="主要页面">
+        <button type="button" data-view="overview" aria-current="page" title="概览"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" fill="none" stroke="currentColor"/><rect x="14" y="4" width="6" height="6" fill="none" stroke="currentColor"/><rect x="4" y="14" width="6" height="6" fill="none" stroke="currentColor"/><rect x="14" y="14" width="6" height="6" fill="none" stroke="currentColor"/></svg><span class="rail-label">概览</span></button>
+        <button type="button" data-view="leads" title="线索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h9" fill="none" stroke="currentColor" stroke-linecap="round"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor"/></svg><span class="rail-label">线索</span></button>
+        <button type="button" data-view="sources" title="来源"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14M5 12h6M11 12l4-4h4M11 12l4 4h4" fill="none" stroke="currentColor" stroke-linecap="round"/><circle cx="5" cy="5" r="1.8" fill="none" stroke="currentColor"/><circle cx="5" cy="19" r="1.8" fill="none" stroke="currentColor"/><circle cx="19" cy="8" r="1.8" fill="none" stroke="currentColor"/><circle cx="19" cy="16" r="1.8" fill="none" stroke="currentColor"/></svg><span class="rail-label">来源</span></button>
+      </nav>
+      <div class="rail-bottom">
+        <a href="/" target="_blank" rel="noreferrer" title="打开落地页" aria-label="打开落地页"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-8 8M11 5H6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </aside>
+
+    <main class="canvas">
+      <header class="title-row">
+        <div>
+          <h1 id="page-title">投放概览</h1>
+          <p class="sub" id="page-sub">Beerlao 老挝啤酒 · 中国区整箱咨询。访问、点击与留资均来自本页面的实际事件。</p>
+        </div>
+        <div class="title-actions">
+          <span class="stamp" id="freshness">正在载入…</span>
+          <button class="btn primary" type="button" id="refresh">刷新数据</button>
+        </div>
+      </header>
+
+      <div class="demo-banner" id="demo-banner" hidden>
+        <span>当前显示的是演示数据，用于检查看板结构；正式投放前请清空。</span>
+        <button type="button" id="clear-demo">清空演示数据</button>
+      </div>
+
+      <div class="filters" id="global-filters">
+        <label class="sr-only" for="range">时间范围</label>
+        <select class="select" id="range">
+          <option value="7">最近 7 天</option>
+          <option value="30" selected>最近 30 天</option>
+          <option value="90">最近 90 天</option>
+        </select>
+        <label class="sr-only" for="source">来源</label>
+        <select class="select" id="source">
+          <option value="all">全部来源</option>
+        </select>
+        <span class="spacer"></span>
+        <button class="btn ghost" type="button" id="seed-demo">载入演示数据</button>
+      </div>
+
+      <section data-view-panel="overview">
+        <div class="kpis" aria-label="投放核心指标">
+          <div class="kpi"><div class="kpi-label">访问人数</div><div class="kpi-value" id="kpi-visitors">0</div><div class="kpi-note">窗口内去重访客</div></div>
+          <div class="kpi"><div class="kpi-label">咨询点击</div><div class="kpi-value" id="kpi-clicks">0</div><div class="kpi-note">去重访客点击</div></div>
+          <div class="kpi"><div class="kpi-label">留资线索</div><div class="kpi-value" id="kpi-leads">0</div><div class="kpi-note">有效表单提交</div></div>
+          <div class="kpi"><div class="kpi-label">访问转化率</div><div class="kpi-value" id="kpi-rate">0.0<small>%</small></div><div class="kpi-note">留资 ÷ 访问</div></div>
+        </div>
+
+        <div class="grid top">
+          <section class="panel span-7" aria-labelledby="funnel-title">
+            <div class="panel-head"><h2 id="funnel-title">转化漏斗</h2><span class="meta" id="funnel-window">最近 30 天</span></div>
+            <div class="funnel" id="funnel">
+              <div class="funnel-row"><span class="funnel-label">访问</span><div class="funnel-track"><div class="funnel-fill" id="funnel-visitors"></div></div><span class="funnel-value" id="funnel-visitors-value">0</span></div>
+              <div class="funnel-row"><span class="funnel-label">点击咨询</span><div class="funnel-track"><div class="funnel-fill" id="funnel-clicks"></div></div><span class="funnel-value" id="funnel-clicks-value">0</span></div>
+              <div class="funnel-row"><span class="funnel-label">提交线索</span><div class="funnel-track"><div class="funnel-fill" id="funnel-leads"></div></div><span class="funnel-value" id="funnel-leads-value">0</span></div>
+            </div>
+            <p class="funnel-note" id="funnel-note">还没有足够数据。</p>
+            <div class="funnel-stats" aria-label="漏斗比率">
+              <div><span>点击率</span><strong id="funnel-click-rate">0.0%</strong></div>
+              <div><span>留资率</span><strong id="funnel-conversion-rate">0.0%</strong></div>
+            </div>
+          </section>
+
+          <section class="panel span-5" aria-labelledby="source-title">
+            <div class="panel-head"><h2 id="source-title">来源分布</h2><span class="meta">按访问去重</span></div>
+            <div class="source-list" id="source-list"></div>
+          </section>
+
+          <section class="panel span-7" aria-labelledby="visitors-title">
+            <div class="panel-head"><h2 id="visitors-title">每日访问</h2><span class="meta">去重访客</span></div>
+            <div class="chart" id="visitors-chart"></div>
+          </section>
+
+          <section class="panel span-5" aria-labelledby="daily-leads-title">
+            <div class="panel-head"><h2 id="daily-leads-title">每日留资</h2><span class="meta">表单提交</span></div>
+            <div class="chart small" id="leads-chart"></div>
+          </section>
+
+          <section class="panel span-12" aria-labelledby="recent-title">
+            <div class="panel-head"><h2 id="recent-title">最近线索</h2><button class="text-link" type="button" data-view-jump="leads">查看全部</button></div>
+            <div class="table-wrap">
+              <table class="lead-table">
+                <thead><tr><th>提交时间</th><th>客户</th><th class="cell-optional">城市</th><th class="n">数量</th><th class="cell-optional">来源</th><th>状态</th></tr></thead>
+                <tbody id="recent-body"></tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section data-view-panel="leads" hidden>
+        <div class="section-head"><div><h2>全部线索</h2><p>按提交时间倒序，最多显示 200 条。</p></div></div>
+        <div class="filters">
+          <label class="sr-only" for="lead-status">线索状态</label>
+          <select class="select" id="lead-status"><option value="all">全部状态</option><option value="new">新线索</option><option value="contacted">已联系</option><option value="quoted">已报价</option><option value="won">已成交</option><option value="lost">已流失</option></select>
+        </div>
+        <div class="panel">
+          <div class="table-wrap">
+            <table class="lead-table">
+              <thead><tr><th>提交时间</th><th>客户</th><th class="cell-optional">城市</th><th class="n">数量</th><th class="cell-optional">来源</th><th>状态</th></tr></thead>
+              <tbody id="leads-body"></tbody>
+            </table>
+          </div>
+          <div class="empty-state" id="leads-empty" hidden>这个筛选条件下还没有线索。</div>
+        </div>
+      </section>
+
+      <section data-view-panel="sources" hidden>
+        <div class="section-head"><div><h2>来源明细</h2><p>同一访客按首次落地的来源归因。</p></div></div>
+        <div class="panel">
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>来源</th><th class="n">访问</th><th class="n">咨询点击</th><th class="n">留资</th><th class="n">转化率</th></tr></thead>
+              <tbody id="sources-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="charts.js" defer></script>
+  <script src="admin.js" defer></script>
+</body>
+</html>
+
+
