@@ -1,0 +1,121 @@
+/* Five landing directions for Beerlao. Shared structure, distinct art direction. */
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body { font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+h1, h2, p, figure { margin: 0; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+.poster { --display: "Cormorant Garamond", "Noto Serif SC", serif; --body: "Noto Sans SC", "Microsoft YaHei", sans-serif; --bg: #073326; --ink: #efe5d2; --paper: #e9ddc6; --accent: #c29a4a; --muted: #cbbfa8; position: relative; min-height: 100svh; overflow: hidden; background: var(--bg); color: var(--ink); isolation: isolate; }
+.poster::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url('../assets/paper-grain.png') repeat; opacity: .34; pointer-events: none; }
+.topbar { position: relative; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 30px; }
+.brand { display: flex; align-items: baseline; gap: 10px; font-family: var(--display); font-size: 26px; font-weight: 600; letter-spacing: -.04em; }
+.brand span { font-family: var(--body); font-size: 12px; letter-spacing: .04em; font-weight: 400; }
+.nav { display: flex; gap: 28px; font-size: 13px; font-weight: 500; }
+.nav a { opacity: .82; }
+.top-cta { display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; background: var(--accent); color: #1b241e; font-size: 13px; font-weight: 700; }
+.hero { position: relative; z-index: 3; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); min-height: calc(100svh - 78px); padding: 0 30px 28px; }
+.copy { position: relative; z-index: 8; grid-column: 1 / span 7; align-self: center; }
+.kicker { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; color: var(--muted); font-size: 12px; letter-spacing: .06em; }
+.kicker::before { content: ""; width: 30px; height: 3px; background: var(--accent); }
+h1 { max-width: 8.5em; font-family: var(--display); font-size: clamp(5rem, 10.5vw, 10.8rem); font-weight: 400; line-height: .87; letter-spacing: -.055em; text-wrap: balance; }
+h1 em { font-style: normal; color: var(--accent); }
+.lead { max-width: 33ch; margin-top: 28px; color: var(--muted); font-size: 16px; line-height: 1.72; }
+.cta-row { display: flex; align-items: center; gap: 16px; margin-top: 24px; }
+.cta { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 20px; background: var(--accent); color: #17221c; font-weight: 700; }
+.mini { color: var(--muted); font-size: 12px; }
+.specs { display: flex; gap: 28px; margin-top: 44px; padding-top: 15px; border-top: 4px solid var(--accent); max-width: 520px; }
+.specs strong { display: block; color: var(--ink); font-family: var(--display); font-size: 26px; font-weight: 500; line-height: 1; }
+.specs span { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; }
+.scene { position: absolute; z-index: 1; overflow: hidden; background: #294237; }
+.scene img { width: 100%; height: 100%; object-fit: cover; }
+.scene::after { content: ""; position: absolute; inset: 0; background: rgba(7, 51, 38, .16); }
+.product { position: absolute; z-index: 7; margin: 0; background: var(--paper); padding: 18px; }
+.product img { width: 100%; mix-blend-mode: multiply; }
+.seal { position: absolute; z-index: 9; display: grid; place-content: center; text-align: center; border-radius: 50%; background: var(--accent); color: #1b241e; }
+.seal strong { display: block; font-family: var(--display); font-size: 48px; line-height: .75; font-weight: 600; }
+.seal span { display: block; margin-top: 7px; font-size: 10px; letter-spacing: .06em; line-height: 1.35; }
+.variant-tag { position: absolute; z-index: 10; left: 30px; bottom: 18px; color: var(--muted); font-size: 11px; letter-spacing: .06em; }
+
+/* 01 — River epic */
+.v1 .scene { top: 0; right: 0; bottom: 0; width: 48%; }
+.v1 .scene img { object-position: center; }
+.v1 .product { right: 5vw; bottom: 5vh; width: min(38vw, 560px); transform: rotate(-2.5deg); }
+.v1 .seal { right: 8vw; top: 12vh; width: 150px; aspect-ratio: 1; transform: rotate(7deg); }
+.v1 .copy { grid-column: 1 / span 7; }
+
+/* 02 — Rice print */
+.v2 { --bg: #efe4cf; --ink: #1d221c; --paper: #f5ecda; --accent: #a23d2d; --muted: #5e6156; }
+.v2::before { opacity: .48; }
+.v2 .topbar { border-bottom: 2px solid #1d221c; }
+.v2 .top-cta { background: #1d221c; color: #f5ecda; }
+.v2 .copy { grid-column: 1 / span 5; align-self: start; padding-top: 8vh; }
+.v2 h1 { max-width: 6.3em; font-family: "Noto Serif SC", serif; font-size: clamp(5rem, 9vw, 9.4rem); font-weight: 500; line-height: .92; }
+.v2 .kicker { color: #e1c8a6; }
+.v2 .scene { top: 10vh; right: 0; bottom: 0; width: 43%; opacity: .32; clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%); }
+.v2 .scene::after { background: rgba(239, 228, 207, .28); }
+.v2 .product { left: 49%; right: auto; bottom: 2vh; width: min(29vw, 430px); transform: rotate(-3deg); background: #f8f0df; border: 8px solid #1d221c; }
+.v2 .seal { top: 17vh; right: 10vw; width: 130px; aspect-ratio: 1; border-radius: 0; background: #a23d2d; color: #f5ecda; transform: rotate(4deg); }
+.v2 .seal strong { font-family: "Noto Serif SC", serif; font-size: 36px; }
+.v2 .specs { border-top-color: #1d221c; }
+.v2 .variant-tag { color: #e1c8a6; }
+
+/* 03 — Mekong travel poster */
+.v3 { --bg: #0d5955; --ink: #f4edda; --paper: #e8dcc4; --accent: #d0a144; --muted: #d2c6ad; }
+.v3 .scene { inset: 0 0 0 38%; width: 62%; }
+.v3 .scene::after { background: rgba(13, 89, 85, .18); }
+.v3 .copy { grid-column: 1 / span 6; align-self: center; padding: 52px; margin-left: -30px; background: #e8dcc4; color: #123a37; }
+.v3 .copy .muted { color: #4f665f; }
+.v3 .kicker { color: #50665f; }
+.v3 h1 { font-family: "Noto Serif SC", serif; font-weight: 500; }
+.v3 h1 em { color: #a84a37; }
+.v3 .lead { color: #4f665f; }
+.v3 .specs { border-top-color: #a84a37; }
+.v3 .specs strong { color: #123a37; }
+.v3 .specs span, .v3 .mini { color: #5a6b63; }
+.v3 .product { right: 6vw; bottom: 4vh; width: min(25vw, 360px); transform: rotate(2deg); }
+.v3 .seal { right: 11vw; top: 12vh; width: 144px; aspect-ratio: 1; background: #d0a144; color: #0d5955; }
+.v3 .variant-tag { color: #d2c6ad; }
+
+/* 04 — Woven textile */
+.v4 { --bg: #6f2e27; --ink: #f2dfb9; --paper: #e5d2ae; --accent: #d0a24a; --muted: #e1c8a6; }
+.v4::after { content: ""; position: absolute; z-index: 0; left: 0; right: 0; bottom: 0; height: 16px; background: repeating-linear-gradient(90deg, #d0a24a 0 18px, #1f3f32 18px 36px, #a23d2d 36px 54px, #e5d2ae 54px 72px); }
+.v4 .topbar { border-bottom: 12px solid #d0a24a; }
+.v4 .copy { grid-column: 1 / span 6; align-self: center; }
+.v4 h1 { font-family: "Noto Serif SC", serif; font-weight: 600; color: #f2dfb9; }
+.v4 h1 em { color: #d0a24a; }
+.v4 .scene { top: 15vh; right: 0; bottom: 0; width: 46%; clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%); }
+.v4 .scene::after { background: rgba(111, 46, 39, .15); }
+.v4 .product { right: 7vw; bottom: 5vh; width: min(31vw, 450px); background: #e5d2ae; border: 12px solid #1f3f32; transform: rotate(2deg); }
+.v4 .seal { right: 12vw; top: 14vh; width: 148px; aspect-ratio: 1; background: #1f3f32; color: #e5d2ae; border: 8px solid #d0a24a; }
+.v4 .specs { border-top-color: #1f3f32; }
+.v4 .variant-tag { color: #e1c8a6; }
+
+/* 05 — Night market */
+.v5 { --bg: #101815; --ink: #f4e8cf; --paper: #e4d5b9; --accent: #d1a04b; --muted: #c9bda6; }
+.v5 .scene { inset: 0; width: 100%; }
+.v5 .scene::after { background: rgba(10, 20, 16, .64); }
+.v5 .copy { grid-column: 1 / span 6; align-self: center; }
+.v5 h1 { font-family: "Cormorant Garamond", "Noto Serif SC", serif; }
+.v5 h1 em { color: #e6b65e; }
+.v5 .product { right: 6vw; bottom: 6vh; width: min(34vw, 500px); background: #e4d5b9; transform: rotate(1.5deg); }
+.v5 .seal { right: 10vw; top: 13vh; width: 140px; aspect-ratio: 1; background: #d1a04b; color: #17221c; }
+.v5 .specs { border-top-color: #d1a04b; }
+.v5 .variant-tag { color: #c9bda6; }
+
+@media (max-width: 800px) {
+  .topbar { padding: 16px 18px; }
+  .nav { display: none; }
+  .brand { font-size: 22px; }
+  .hero { display: block; min-height: auto; padding: 0 18px 28px; }
+  .copy { padding-top: 5vh; }
+  h1 { font-size: clamp(4.3rem, 17vw, 7rem); }
+  .scene { position: relative; inset: auto; width: 100%; height: 38vh; margin-top: 24px; clip-path: none !important; opacity: 1 !important; }
+  .product { position: relative; right: auto; bottom: auto; width: 72%; margin: -54px 0 0 auto; transform: rotate(-2deg); }
+  .seal { position: absolute; right: 18px; top: 42vh; width: 100px; }
+  .specs { margin-top: 28px; }
+  .variant-tag { position: relative; left: auto; bottom: auto; display: block; margin-top: 18px; }
+  .v3 .copy { margin: 0; padding: 28px; }
+  .v4::after { display: none; }
+}
+
+

@@ -16,9 +16,9 @@ npm start
 
 ## 当前版本
 
-落地页采用 B · 绿标档案方向：
+落地页采用 B · 稻田木刻方向：
 
-- 放大酒标与档案卡结构。
+- 深绿旧纸色、稻田野景、木刻感大字与红色印章。
 - 330ml × 24 瓶整箱说明。
 - 老挝原产地照片与署名。
 - 24 瓶分配计算器。
@@ -88,7 +88,8 @@ UTM 参数支持：
 - `lead-form.js`：报价表单提交。
 - `server.mjs`：无依赖 Node.js 服务。
 - `charts.js` / `app.css`：Taste Skill 的后台图表与中性基础样式。
-- `index-label.html`：B 方向的原始风格预览。
+- `index-label.html`：绿标档案方向预览。
+- `rice-print.css`：当前 B · 稻田木刻最终页样式。
 - `index-poster.html` / `index-editorial.html`：A/C 方向预览。
 
 ## 来源自动识别
@@ -122,3 +123,5 @@ https://你的域名/?utm_source=is&utm_medium=paid&utm_campaign=beerlao-q4
 ```
 
 注意：Facebook、TikTok、Instagram 的站内浏览器经常不传递 referrer，因此 UTM 参数仍然是投放归因最可靠的方式。
+
+

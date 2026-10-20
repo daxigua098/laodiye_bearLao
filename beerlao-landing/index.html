@@ -3,89 +3,124 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Beerlao 老挝啤酒落地页视觉方向 B：绿标档案，复古标签风格。">
-  <title>Beerlao 老挝啤酒 · 整箱报价</title>
+  <meta name="description" content="Beerlao 老挝啤酒整箱报价。来自老挝的 Premium Lager，330ml × 24 瓶整箱。">
+  <title>Beerlao 老挝啤酒 · 稻田与木刻</title>
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Zilla+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="common.css">
-  <link rel="stylesheet" href="label.css">
+  <link rel="stylesheet" href="rice-print.css">
 </head>
-<body class="label-page">
+<body class="rice-print">
   <a class="skip-link" href="#main">跳到主要内容</a>
 
-  <section class="label-hero" aria-labelledby="hero-title">
+  <section class="rice-hero" aria-labelledby="hero-title">
     <header class="site-head wrap">
       <a class="brand" href="#" aria-label="Beerlao 首页"><strong>Beerlao</strong><span>老挝啤酒</span></a>
       <nav class="nav" aria-label="主导航">
         <a href="#pack">整箱</a>
-        <a href="#origin">原产地</a>
-        <a href="#serve">喝法</a>
+        <a href="#land">山河</a>
+        <a href="#culture">风土</a>
         <a href="#quote">报价</a>
       </nav>
       <a class="head-action" href="#quote" data-track-cta="header_quote">获取报价</a>
     </header>
 
-    <div class="label-stage">
-      <div class="label-panel">
-        <div class="label-copy">
-          <h1 class="label-title" id="hero-title">Beerlao<span>老挝拉格</span></h1>
-          <p class="label-support">Premium Lager，330ml × 24 瓶整箱。绿色酒标、金色酒液，来自老挝的拉格啤酒。</p>
-          <a class="action label-action" href="#quote" data-track-cta="hero_quote">获取整箱报价</a>
+    <div class="hero-main">
+      <div class="hero-copy">
+        <h1 class="lines" id="hero-title">
+          <span class="line"><span data-line style="--i:0">稻田与木刻</span></span>
+          <span class="line"><span data-line style="--i:1">一瓶老挝</span></span>
+        </h1>
+        <p class="hero-support" data-rise style="--i:2">Beerlao Premium Lager，330ml × 24 瓶整箱。来自老挝的拉格啤酒，冰镇后开瓶，适合与朋友分享。</p>
+        <div class="hero-actions" data-rise style="--i:3">
+          <a class="action" href="#quote" data-track-cta="hero_quote">获取整箱报价</a>
         </div>
-        <figure class="label-visual">
-          <img src="assets/beerlao-bottle.png" width="320" height="320" alt="Beerlao Premium Lager 单瓶产品图">
-          <div class="label-seal" aria-hidden="true"><strong>24</strong><span>BOTTLES</span></div>
-        </figure>
+        <div class="hero-facts" data-rise style="--i:4" aria-label="产品规格">
+          <div class="hero-fact"><strong>330</strong><span>ml 单瓶容量</span></div>
+          <div class="hero-fact"><strong>24</strong><span>瓶整箱数量</span></div>
+          <div class="hero-fact"><strong>Lager</strong><span>Premium Lager</span></div>
+        </div>
       </div>
+
+      <div class="hero-photo" data-rise style="--i:1">
+        <img src="assets/green-rice-sheaves-planted-in-a-paddy.jpg" width="1920" height="1280" alt="老挝稻田中整齐的绿色秧苗">
+      </div>
+
+      <figure class="hero-product drift" data-rise style="--i:3">
+        <img src="assets/beerlao-bottle.png" width="320" height="320" alt="Beerlao Premium Lager 单瓶产品图">
+      </figure>
+
+      <div class="hero-seal" aria-hidden="true" data-rise style="--i:4">
+        <strong>老挝</strong>
+        <span>LAO · BEERLAO</span>
+      </div>
+      <p class="hero-note">原产地照片仅用于呈现老挝风土，来源与署名见页脚。</p>
     </div>
   </section>
 
   <main id="main">
-    <section class="section pack-ledger" id="pack" aria-labelledby="pack-title">
-      <div class="ledger-inner wrap">
-        <div class="ledger-number" data-reveal>24</div>
-        <div class="ledger-copy">
-          <h2 id="pack-title" data-reveal>一箱的档案</h2>
-          <p data-reveal>整箱正面印着 Beerlao 的品牌字与中文“老挝啤酒”。金色箱体、绿色酒标、红色细节，规格一眼可读。</p>
-          <div class="ledger-grid" data-reveal>
-            <div><strong>330ml</strong><span>单瓶容量</span></div>
-            <div><strong>24</strong><span>瓶 / 整箱</span></div>
-            <div><strong>Premium</strong><span>Lager 类型</span></div>
-            <div><strong>Lao</strong><span>原产地标识</span></div>
-          </div>
-          <figure class="ledger-case" data-reveal>
-            <img src="assets/beerlao-case.png" width="420" height="420" alt="Beerlao 老挝啤酒整箱与单瓶并列产品图" loading="lazy" decoding="async">
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section archive-spread" id="origin" aria-labelledby="origin-title">
-      <figure class="archive-photo" data-reveal>
-        <img src="assets/green-rice-sheaves-planted-in-a-paddy.jpg" width="1920" height="1280" alt="老挝稻田里成排的绿色秧苗和长长的影子" loading="lazy" decoding="async">
+    <section class="rice-section wrap field-story" id="land" aria-labelledby="land-title">
+      <figure class="field-photo picture" data-reveal>
+        <img src="assets/mountains-mekong-river-and-dwellings-seen-from.jpg" width="1920" height="1280" alt="黄昏时琅勃拉邦的湄公河、群山与河岸民居" loading="lazy" decoding="async">
       </figure>
-      <div class="archive-card" data-reveal>
-        <h2 id="origin-title">老挝<br>写在标上</h2>
-        <p>“老挝啤酒”四个字直接印在整箱包装上。页面用老挝稻田与湄公河的照片补充这层地域信息，让包装上的产地不只是一个小字。</p>
-        <div class="archive-facts" aria-label="产品摘要">
-          <span>Premium Lager</span><span>330ml</span><span>24 瓶整箱</span>
-        <figure class="archive-detail picture"><img src="assets/20171118-vientiane-3220-dxo.jpg" width="1920" height="1272" alt="从塔銮门方向俯瞰万象城市" loading="lazy" decoding="async"></figure>
+      <div class="field-copy" data-reveal>
+        <h2 id="land-title">山河<br>写在名字里</h2>
+        <p>Beerlao 来自老挝。我们把湄公河、稻田与万象的日常放在同一页，让你先看见这瓶酒来自怎样的地方。</p>
+        <blockquote>山、水、稻田，是老挝最日常的风景。</blockquote>
+        <div class="field-notes" aria-label="老挝风土关键词">
+          <div><span>河流</span><strong>湄公河</strong></div>
+          <div><span>田野</span><strong>稻田</strong></div>
+          <div><span>城市</span><strong>万象</strong></div>
         </div>
       </div>
     </section>
 
-    <section class="section serve-label" id="serve" aria-labelledby="serve-title">
-      <div class="serve-label-grid wrap">
-        <div class="serve-bottle-sheet" data-reveal>
-          <img src="assets/beerlao-bottle.png" width="320" height="320" alt="Beerlao Premium Lager 瓶身与绿色背景产品图" loading="lazy" decoding="async">
-          <img class="serve-glass-sheet" src="assets/free-cold-beer-pint-glass.webp" width="1024" height="683" alt="冰镇啤酒杯实景照片" loading="lazy" decoding="async">
+    <section class="rice-section culture-section" id="culture" aria-labelledby="culture-title">
+      <div class="culture-inner">
+        <div class="culture-head">
+          <h2 id="culture-title">风土<br>四页</h2>
+          <p>不是抽象的“异国情调”，而是具体的山、河、稻田和城市。每一张照片，都来自老挝。</p>
         </div>
-        <div>
-          <h2 id="serve-title" data-reveal>冰镇后<br>再开瓶</h2>
-          <p data-reveal>拉格适合冰镇饮用。把酒瓶擦干净，倒进杯里，等泡沫稳定，再慢慢喝。</p>
+        <div class="culture-grid">
+          <figure class="culture-a picture" data-reveal><img src="assets/green-rice-sheaves-planted-in-a-paddy.jpg" width="1920" height="1280" alt="老挝稻田中整齐的绿色秧苗" loading="lazy" decoding="async"><figcaption>稻田 · 占巴塞</figcaption></figure>
+          <figure class="culture-b picture" data-reveal><img src="assets/dwellings-and-pirogues-on-the-mekong-bank.jpg" width="1920" height="1280" alt="清晨的湄公河岸、木屋与小船" loading="lazy" decoding="async"><figcaption>河岸 · 东德岛</figcaption></figure>
+          <figure class="culture-c picture" data-reveal><img src="assets/20171118-vientiane-3220-dxo.jpg" width="1920" height="1272" alt="从塔銮门方向俯瞰万象城市与绿树" loading="lazy" decoding="async"><figcaption>城市 · 万象</figcaption></figure>
+          <figure class="culture-d picture" data-reveal><img src="assets/sunlight-and-stormy-sky-over-the-mountains.jpg" width="1920" height="1280" alt="老挝万荣的群山与稻田在云层和阳光之间展开" loading="lazy" decoding="async"><figcaption>山野 · 万荣</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="rice-section package-section" id="pack" aria-labelledby="pack-title">
+      <div class="wrap package-grid">
+        <div class="package-visual" data-reveal>
+          <img src="assets/beerlao-case.png" width="420" height="420" alt="Beerlao 老挝啤酒整箱与单瓶产品图" loading="lazy" decoding="async">
+          <div class="package-seal" aria-hidden="true"><strong>24</strong><span>BOTTLES<br>PREMIUM LAGER</span></div>
+        </div>
+        <div class="package-copy" data-reveal>
+          <h2 id="pack-title">一箱<br>二十四瓶</h2>
+          <p>绿色酒标、金色细节与红色边线，来自 Beerlao 的包装本身。每瓶 330ml，整箱二十四瓶，适合聚餐、餐饮和批量备货。</p>
+                    <div class="package-facts" aria-label="产品规格摘要">
+            <p class="package-fact"><strong>330ml</strong> 单瓶容量</p>
+            <p class="package-fact"><strong>24</strong> 瓶 / 整箱</p>
+            <p class="package-fact"><strong>Premium</strong> Lager 类型</p>
+            <p class="package-fact"><strong>Lao</strong> 原产地标识</p>
+          </div>
+          <a class="package-link" href="#quote" data-track-cta="pack_quote">获取整箱报价</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="rice-section serve-section" id="serve" aria-labelledby="serve-title">
+      <div class="wrap serve-grid">
+        <figure class="serve-image picture" data-reveal>
+          <img src="assets/free-cold-beer-pint-glass.webp" width="1024" height="683" alt="冰镇啤酒倒入玻璃杯的近景照片" loading="lazy" decoding="async">
+        </figure>
+        <div class="serve-copy">
+          <h2 id="serve-title" data-reveal>冰镇后<br>慢慢喝</h2>
+          <p data-reveal>把 Beerlao 放进冰箱，等它足够冷。开瓶，倒进杯子，先看金色酒液和泡沫，再喝第一口。</p>
 
           <div class="calculator" data-calc data-reveal>
             <h3>一箱怎么分</h3>
@@ -108,40 +143,41 @@
       </div>
     </section>
 
-    <section class="quote-section" id="quote" aria-labelledby="quote-title">
-      <div class="quote-copy">
-        <h2 id="quote-title">获取整箱报价</h2>
-        <p>留下称呼、手机号和所在城市，我们会根据 330ml × 24 瓶整箱规格与你联系。</p>
-        <figure class="quote-pack picture"><img src="assets/beerlao-case.png" width="420" height="420" alt="Beerlao 老挝啤酒整箱与单瓶产品图" loading="lazy" decoding="async"></figure>
-        <p class="small-note">信息仅用于本次整箱报价联系，不用于其他营销。未成年人禁止饮酒。</p>
-      </div>
-      <div class="quote-form-wrap">
-        <form id="lead-form" class="lead-form">
-          <div class="form-grid">
-            <label class="form-field">称呼<input name="name" required minlength="2" maxlength="30" autocomplete="name" placeholder="例：陈先生"></label>
-            <label class="form-field">手机号<input name="phone" required inputmode="tel" pattern="1[3-9][0-9]{9}" maxlength="11" autocomplete="tel" placeholder="11 位手机号"></label>
-            <label class="form-field">所在城市<input name="city" required minlength="2" maxlength="30" autocomplete="address-level2" placeholder="例：上海"></label>
-            <label class="form-field">预计数量<select name="quantity" required><option value="1">1 箱（24 瓶）</option><option value="2">2 箱</option><option value="5">5 箱</option><option value="10">10 箱以上</option></select></label>
+    <section class="rice-section quote-section" id="quote" aria-labelledby="quote-title">
+      <div class="wrap quote-grid">
+        <div class="quote-aside" data-reveal>
+          <h2 id="quote-title">把这箱酒<br>带回餐桌</h2>
+          <p>留下称呼、手机号和所在城市，我们会根据 330ml × 24 瓶整箱规格与你联系。</p>
+          <small>信息仅用于本次整箱报价联系，不用于其他营销。未成年人禁止饮酒。</small>
+        </div>
+        <div class="quote-panel" data-reveal>
+          <form id="lead-form" class="lead-form">
+            <div class="form-grid">
+              <label class="form-field">称呼<input name="name" required minlength="2" maxlength="30" autocomplete="name" placeholder="例：陈先生"></label>
+              <label class="form-field">手机号<input name="phone" required inputmode="tel" pattern="1[3-9][0-9]{9}" maxlength="11" autocomplete="tel" placeholder="11 位手机号"></label>
+              <label class="form-field">所在城市<input name="city" required minlength="2" maxlength="30" autocomplete="address-level2" placeholder="例：上海"></label>
+              <label class="form-field">预计数量<select name="quantity" required><option value="1">1 箱（24 瓶）</option><option value="2">2 箱</option><option value="5">5 箱</option><option value="10">10 箱以上</option></select></label>
+            </div>
+            <label class="consent"><input type="checkbox" name="consent" required>我同意将以上信息用于本次报价联系</label>
+            <button class="action" type="submit">提交咨询</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+          <div id="lead-success" class="lead-success" hidden>
+            <h3>已收到你的咨询</h3>
+            <p>我们会按你留下的联系方式与你沟通整箱报价。你也可以继续查看 <a href="#pack">整箱规格</a>。</p>
           </div>
-          <label class="consent"><input type="checkbox" name="consent" required>我同意将以上信息用于本次报价联系</label>
-          <button class="action" type="submit">提交咨询</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
-        <div id="lead-success" class="lead-success" hidden>
-          <h3>已收到你的咨询</h3>
-          <p>我们会按你留下的联系方式与你沟通整箱报价。你也可以继续查看 <a href="#pack">整箱规格</a>。</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer wrap">
+  <footer class="heritage-footer wrap">
     <div class="footer-top">
       <p class="footer-wordmark" aria-hidden="true">Beerlao</p>
-      <div class="footer-meta">
+      <div>
         <p>Beerlao Premium Lager · 330ml × 24 瓶整箱</p>
         <p class="small-note">产品图片由用户提供。原产地照片来自 Wikimedia Commons：Basile Morin、Jakub Hałun，CC BY-SA 4.0；啤酒杯照片来自 rawpixel，CC0。</p>
-        <p class="credit"><a href="https://commons.wikimedia.org/wiki/File:Green_rice_sheaves_planted_in_a_paddy_field_with_long_shadows_at_golden_hour_in_Don_Det_Laos.jpg">稻田照片</a> · <a href="https://commons.wikimedia.org/wiki/File:Mountains_Mekong_river_and_dwellings_seen_from_Mount_Phou_Si_at_dusk_in_Luang_Prabang_Laos.jpg">湄公河照片</a> · <a href="https://commons.wikimedia.org/wiki/File:20171118_Vientiane_3220_DxO.jpg">万象照片</a> · <a href="https://www.rawpixel.com/image/5917001/image-public-domain-glass-free">啤酒杯照片</a></p>
+        <p class="credit"><a href="https://commons.wikimedia.org/wiki/File:Sunlight_and_stormy_sky_over_the_mountains_and_paddy_fields_in_Vang_Vieng,_Laos.jpg">山野照片</a> · <a href="https://commons.wikimedia.org/wiki/File:Mountains_Mekong_river_and_dwellings_seen_from_Mount_Phou_Si_at_dusk_in_Luang_Prabang_Laos.jpg">湄公河照片</a> · <a href="https://commons.wikimedia.org/wiki/File:Green_rice_sheaves_planted_in_a_paddy_field_with_long_shadows_at_golden_hour_in_Don_Det_Laos.jpg">稻田照片</a> · <a href="https://commons.wikimedia.org/wiki/File:20171118_Vientiane_3220_DxO.jpg">万象照片</a></p>
         <p class="credit">理性饮酒 · 未成年人禁止饮酒 · 酒后不开车</p>
       </div>
     </div>
@@ -153,6 +189,7 @@
   <script src="lead-form.js" defer></script>
 </body>
 </html>
+
 
 
 
